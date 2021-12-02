@@ -1,0 +1,95 @@
+<div class="container">
+    <h1>Create New Product</h1>
+  
+    <a href="#" routerLink="/product/index" class="btn leftbtn btn-primary">Back</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="productName">productName:</label>
+            <input 
+                formControlName="productName"
+                id="productName" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.productName.touched && f.productName.invalid" class="alert alert-danger">
+                <div *ngIf="f.productName.errors?.required">productName is required.</div>
+            </div>
+        </div>
+  
+        <div class="form-group">
+            <label for="description">description</label>
+            <textarea 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                class="form-control">
+            </textarea>
+            <div *ngIf="f.description.touched && f.description.invalid" class="alert alert-danger">
+                <div *ngIf="f.description.errors?.required">description is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="productCode">productCode:</label>
+            <input 
+                formControlName="productCode"
+                id="productCode" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.productCode.touched && f.productCode.invalid" class="alert alert-danger">
+                <div *ngIf="f.productCode.errors?.required">productCode is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="releaseDate">releaseDate:</label>
+            <input 
+                formControlName="releaseDate"
+                id="releaseDate" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.releaseDate.touched && f.releaseDate.invalid" class="alert alert-danger">
+                <div *ngIf="f.releaseDate.errors?.required">releaseDate is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="price">price:</label>
+            <input 
+                formControlName="price"
+                id="price" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.price.touched && f.price.invalid" class="alert alert-danger">
+                <div *ngIf="f.price.errors?.required">price is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="starRating">starRating:</label>
+            <input 
+                formControlName="starRating"
+                id="starRating" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.starRating.touched && f.starRating.invalid" class="alert alert-danger">
+                <div *ngIf="f.starRating.errors?.required">starRating is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="imageUrl">imageUrl:</label>
+            <input 
+                formControlName="imageUrl"
+                id="imageUrl" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.imageUrl.touched && f.imageUrl.invalid" class="alert alert-danger">
+                <div *ngIf="f.imageUrl.errors?.required">imageUrl is required.</div>
+            </div>
+        </div>
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>

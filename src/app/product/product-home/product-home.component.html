@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>Product Management App</h1>
+  
+    <!-- <a href="#" routerLink="/product/create/" class="btn btn-success">Add New Product</a> -->
+    
+    <table class="table table-bordered table-success">
+
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        
+        <a href="#" routerLink="/product/create/" class="btn btn-outline-success btn-warning">Add New Product</a>
+        
+        <th></th>
+        <th> </th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>ReleaseDate</th>
+        <th>Price</th>
+        <th>Product Code</th>
+        <th>Star Rating</th>
+        <th>Product Image</th>
+
+
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>{{ product.productId }}</td>
+        <td>{{ product.productName }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.releaseDate }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.productCode }}</td>
+        <td>{{ product.starRating}}</td>
+        <td>{{ product.imageUrl | shortUrlPipe }}</td>
+
+
+        <td>
+          <a href="#" [routerLink]="['/product/', product.productId, 'details']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/product/', product.productId, 'update']" class="btn btn-outline-primary">Edit</a>
+          <button type="button" (click)="deleteProduct(product.productId)" class="btn btn-warning">Delete</button>
+        </td>
+      </tr>
+
+      
+
+    </table>
+ </div>

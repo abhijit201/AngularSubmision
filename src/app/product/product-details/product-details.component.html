@@ -1,0 +1,74 @@
+<div class="container">
+    <h1>View Product</h1>
+  
+    <a href="#" routerLink="/product/index" class="btn btn-primary">Back</a>
+
+
+    <table class="table table-bordered">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>ReleaseDate</th>
+          <th>Price</th>
+          <th>Product Code</th>
+          <th>Star Rating</th>
+          <th>Product Image</th>
+          <!-- <th width="220px">Action</th> -->
+        </tr>
+        <tr>
+          <td>{{ product.productId }}</td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.releaseDate }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.productCode }}</td>
+          <td>{{ product.starRating}}</td>
+          <td>{{ product.imageUrl | slice:0:30 }}</td>
+        </tr>
+      </table>
+
+   
+    <!-- <div>
+        <strong>ID:</strong>
+        <p>{{ product.productId }}</p>
+    </div> -->
+   
+    <!-- <div>
+        <strong>Product Name:</strong>
+        <p>{{ product.productName }}</p>
+    </div>
+   
+    <div>
+        <strong>Description:</strong>
+        <p>{{ product.description }}</p>
+    </div>
+
+    <div>
+        <strong>Release Date:</strong>
+        <p>{{ product.releaseDate }}</p>
+    </div>
+   
+    <div>
+        <strong>Price:</strong>
+        <p>{{ product.price }}</p>
+    </div>
+
+    <div>
+        <strong>Product Code:</strong>
+        <p>{{ product.productCode }}</p>
+    </div>
+   
+    <div>
+        <strong>Star Rating:</strong>
+        <p>{{ product.starRating }}</p>
+    </div> -->
+
+    <div>
+        <!-- <strong>imageUrl:</strong> -->
+        <img src={{product.imageUrl}} alt="Image Not available">
+        <!-- <img alt="xxx" class="xxx" src={{ product.imageUrl }}> -->
+        <!-- <p>{{ product.imageUrl}}</p> -->
+    </div>
+
+</div>
