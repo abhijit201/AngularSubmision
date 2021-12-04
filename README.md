@@ -1,5 +1,8 @@
 # AngularProductManagement
 
+
+use 9191 Port http://localhost:9191 for server side
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
 ## Development server
