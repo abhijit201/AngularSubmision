@@ -9,8 +9,10 @@ import { catchError, finalize } from 'rxjs/operators';
 })
 export class ProductService {
 
-  private apiURL = "http://localhost:9191/api/v1";
+  // private apiURL = "http://localhost:9191/api/v1";
+  private apiURL = "https://fakestoreapi.com";
 
+  // https://fakestoreapi.com
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
